@@ -1,40 +1,103 @@
+/*
+-----------------------------------------------------
+Utilisation des polices du dossier Fonts en local
+-----------------------------------------------------
+*/
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/Lato-Regular.ttf");
+}
+@font-face {
+  font-family: "Lato";
+  font-style: bold;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/Lato-Bold.ttf");
+}
+@font-face {
+  font-family: "Lato";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/Lato-Italic.ttf");
+}
+/*
+-----------------------------------------------------
+Style global
+-----------------------------------------------------
+*/
 * {
   box-sizing: border-box;
+  
 }
 html,
 body {
   margin: 0;
   padding: 0;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
 }
-
-.header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.menu {
-  display: inline-block;
-}
-img {
-  float: left;
-  margin: 5px;
-}
-
-p {
-  text-align: justify;
-  font-size: 25px;
-}
-
 /*
-    img {
-      float: left;
-      margin: 5px;
-    }
+-----------------------------------------------------
+Style header & menu
+-----------------------------------------------------
+*/
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+}
+.header nav ul  {
+  display: flex; /* affichage du menu en responsive */
+  background-image: url(../img/bandeau.jpg);
+  background-size: cover;
+  background-position:center;
+  padding:0.4rem 0.4rem 0.4rem 0.4rem;
+  margin: 0;
+  justify-content:space-evenly;  
+  background-color: #FFFFFF;
+  align-items: center;
+  border:#595959 ridge 2px;
   
-    p {
-      text-align: justify;
-      font-size: 25px;
-    }
+}
+header nav li {
+  display: block;
+  width: 100vw;
+  background-color: rgba(89,89,89,0.70);
+  padding: 0.6rem 0.5rem;
+  margin: 0 0.7rem 0 0.3rem;
+  border-radius: 0.35rem;
+  box-shadow: inset 1px 1px 1px 1px #262626;
+  text-align: center;
+}
+.header nav a  {
+text-decoration: none;
+font-weight: bold;
+font-size: 4.4vw;
+text-shadow: 0px 0px 1px #F2F2F2;
+color: rgba(242,242,242,0.75);
+}
 
+.header nav ul li:hover {
+  color: rgba(89,89,89,0.95);
+  background: rgba(38,38,38,0.45);
+  -webkit-transition-duration: 0.4s; /* pour safari */
+  transition-duration: 0.4s;
+  -webkit-transform:  translateY(5); /* pour safari */ 
+  transform:  translateY(5px) ; /* translate décale de 5 pox vers le bas au moment du hover */
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 1); /* box-shadow ajoute une ombre au moment du hover en dessous du bouton */
+  transition-property: box-shadow, transform;
+}
+.header nav .active {
 
-    */
+  border-radius: 0.35rem;
+
+}
+
+.licence {
+  font-size: 8px;
+}
