@@ -10,6 +10,7 @@ Utilisation des polices du dossier Fonts en local
   font-display: swap;
   src: url("../fonts/Lato-Regular.ttf");
 }
+
 @font-face {
   font-family: "Lato";
   font-style: bold;
@@ -17,6 +18,7 @@ Utilisation des polices du dossier Fonts en local
   font-display: swap;
   src: url("../fonts/Lato-Bold.ttf");
 }
+
 @font-face {
   font-family: "Lato";
   font-style: italic;
@@ -24,80 +26,193 @@ Utilisation des polices du dossier Fonts en local
   font-display: swap;
   src: url("../fonts/Lato-Italic.ttf");
 }
+
 /*
 -----------------------------------------------------
 Style global
 -----------------------------------------------------
 */
 * {
-  box-sizing: border-box;
-  
-}
-html,
-body {
   margin: 0;
   padding: 0;
-  font-family: "Lato", Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
 }
+
+html {
+  background: #F2F2F2;
+}
+
+body {
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  color: #000000;
+  max-width: 1200px;
+  background: white;
+  margin: auto;
+}
+
+h1 {
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  font-size: 1.4em;
+  font-weight: 200;
+  color: #7D7C7D;
+  padding-top: 1.5em;
+  text-align: center;
+}
+
+p {
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  font-size: 0.85em;
+}
+
 /*
 -----------------------------------------------------
 Style header & menu
 -----------------------------------------------------
 */
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+.header_container {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #F2F2F2;
+  padding: 1em 0;
+}
 
+nav {
+  margin: 2.0em 0 0 5%;
 }
-.header nav ul  {
-  display: flex; /* affichage du menu en responsive */
-  background-image: url(../img/bandeau.jpg);
-  background-size: cover;
-  background-position:center;
-  padding:0.4rem 0.4rem 0.4rem 0.4rem;
-  margin: 0;
-  justify-content:space-evenly;  
-  background-color: #FFFFFF;
-  align-items: center;
-  border:#595959 ridge 2px;
-  
+
+ul li {
+  display: inline;
+  padding: 0 1.4em 0 0;
+  font-size: 1em;
+  margin: 1em;
 }
-header nav li {
+
+header ul li a {
+  text-decoration: none;
+  color: #7D7C7D;
+}
+
+li a.active {
+  color: #000000;
+  border-bottom: 2px solid #000000;
+  font-weight: 300;
+  text-decoration: underline;
+}
+
+li a:hover {
+  color: #B6B6B6;
+}
+
+/*
+ -----------------------------------------------------
+ Style grid photos
+ -----------------------------------------------------
+*/
+.grid_container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto;
+  margin-top: 30px;
+  justify-content: center;
+}
+
+.grid_cell {
+  width: 47vw;
+  margin: 0 auto 30px;
+}
+
+.grid_picture {
   display: block;
-  width: 100vw;
-  background-color: rgba(89,89,89,0.70);
-  padding: 0.6rem 0.5rem;
-  margin: 0 0.7rem 0 0.3rem;
-  border-radius: 0.35rem;
-  box-shadow: inset 1px 1px 1px 1px #262626;
+  max-width: 100%
+}
+
+.grid_text {
+  margin-top: 13px;
+}
+
+.grid_text p {
+  font-size: 0.85em;
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+/*
+ -----------------------------------------------------
+ Style footer
+ -----------------------------------------------------
+*/
+footer {
+  background: #7D7C7D;
+  padding: 1.0em;
   text-align: center;
 }
-.header nav a  {
-text-decoration: none;
-font-weight: bold;
-font-size: 4.4vw;
-text-shadow: 0px 0px 1px #F2F2F2;
-color: rgba(242,242,242,0.75);
+
+footer p {
+  font-family: Roboto, sans-serif;
+  font-size: 0.7em;
+  font-weight: 300;
+  color: #A4A4A4;
+  line-height: 100%;
 }
 
-.header nav ul li:hover {
-  color: rgba(89,89,89,0.95);
-  background: rgba(38,38,38,0.45);
-  -webkit-transition-duration: 0.4s; /* pour safari */
-  transition-duration: 0.4s;
-  -webkit-transform:  translateY(5); /* pour safari */ 
-  transform:  translateY(5px) ; /* translate décale de 5 pox vers le bas au moment du hover */
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 1); /* box-shadow ajoute une ombre au moment du hover en dessous du bouton */
-  transition-property: box-shadow, transform;
+footer p a {
+  text-decoration: none;
+  color: #A4A4A4;
 }
-.header nav .active {
+footer img {
+  padding: 0.1em 0 1.0em 0;
+}
+/*
+ -----------------------------------------------------
+ Responsive
+ -----------------------------------------------------
+*/
+@media screen and (min-width : 600px) {
+  .grid_container {
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    margin-top: 54px;
+  }
 
-  border-radius: 0.35rem;
+  .grid_cell {
+    width: 31vw;
+    margin: 0 auto 45px;
+  }
 
+  .grid_picture {
+    width: 31vw;
+  }
+
+  h1 {
+    padding-top: 3em;
+  }
+
+  .header_container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .logo {
+    margin-left: 2.3em;
+  }
+
+  nav {
+    align-self: center;
+    margin: 0 auto;
+  }
 }
 
-.licence {
-  font-size: 8px;
+@media screen and (min-width : 1200px) {
+  body {
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .grid_cell {
+    width: 370px;
+  }
+
+  .grid_picture {
+    width: 370px;
+  }
 }
