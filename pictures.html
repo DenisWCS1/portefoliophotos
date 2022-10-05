@@ -4,14 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width">
     <link href="css\style.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" /> <!-- ajouter un icone -->
     <title>Denis Photos</title>
 </head>
-
-<header class="header_container">
-    <nav>
-
+<header class="header">
+    <nav class="nav">
         <ul>
             <li class="active"><a href="index.html">Acceuil</a></li>
             <li><a href="pictures.html">Photos</a></li>
@@ -22,118 +21,100 @@
 <main>
     <h1>Mes Photos</h1>
     <section class="grid_container">
-        <div class="grid_cell">
-            <img class="grid_picture" src="img/Small/2kags_medium_small.jpg" alt="Les Kag" title="Les Kag">
-            <div class="grid_text">
-                <h3>Les Kag</h3>
-                <p>Festival 3 éléphants Laval</p>
-            </div>
-        </div>
-        <div class="grid_cell">
-            <img class="grid_picture" src="img/Small/bwcheminplage_medium_small.jpg" alt="Dune vers la plage B&W" title="Dune vers la plage B&W">
-            <div class="grid_text">
-                <h3>Dune vers la plage B&W</h3>
-                <p>Tharon</p>
-            </div>
-        </div>
-        <div class="grid_cell">
-            <img class="grid_picture" src="img/Small/Cabannetharon_medium_small.jpg" alt="Pecherie Tharon" title="Pecherie Tharon">
-            <div class="grid_text">
-                <h3>Pecherie</h3>
-                <p>Tharon</p>
-            </div>
-        </div>
-        <div class="grid_cell">
-            <img class="grid_picture" src="img/Small/Graf_medium_small.jpg" alt="Graffiti ancien abattoir de Nantes" title="Graffiti ancien abattoir de Nantes">
-            <div class="grid_text">
-                <h3>Graffiti ancien abattoir </h3>
-                <p>Nantes</p>
-            </div>
-        </div>
-        <div class="grid_cell">
-            <img class="grid_picture" src="img/Small/Accesplage_medium_small.jpg" alt="Chemin vers la plage" title="Chemin vers la plage">
-            <div class="grid_text">
-                <h3>Chemin vers la plage</h3>
-                <p>Tharon</p>
-            </div>
-        </div>
-        <div class="grid_cell">
-            <img class="grid_picture" src="img/Small/Chenille_medium_small.jpg" alt="chenilles processionnaire" title="chenilles processionnaire">
-            <div class="grid_text">
-                <h3>Chenilles processionnaire</h3>
-                <p>Voie romaine</p>
-            </div>
-        </div>
-        <div class="grid_cell">
-            <img class="grid_picture" src="img/Small/Concarneau_medium_small.jpg" alt="rue à Concarneau" title="rue à Concarneau">
-            <div class="grid_text">
-                <h3>Vue d'une rue</h3>
-                <p>Concarneau</p>
-            </div>
-        </div>
-        <div class="grid_cell">
-            <img class="grid_picture" src="img/Small/Galets_medium_small.jpg" alt="Galets Tranche /mer" title="Luminor Flyback">
-            <div class="grid_text">
-                <h3>Galet empilés</h3>
-                <p>la Tranche/mer</p>
-            </div>
-        </div>
-        <div class="grid_cell">
-            <img class="grid_picture" src="img/Small/gwadaeaumer_medium_small.jpg" alt="Mer turquoise Guadeloupe" title="Mer turquoise Guadeloupe">
-            <div class="grid_text">
-                <h3>Mer turquoise</h3>
-                <p>Guadeloupe</p>
-            </div>
-        </div>
-        <div class="grid_cell">
-            <img class="grid_picture" src="img/Small/ebonybones_medium_small.jpg" alt="Ebony Bones festival pont du Rock" title="Ebony Bones festival pont du Rock">
-            <div class="grid_text">
-                <h3>Ebony Bones</h3>
-                <p>Festival pont du Rock Malestroit</p>
-            </div>
-        </div>
-        <div class="grid_cell">
-            <img class="grid_picture" src="img/Small/donlezard_medium_small.jpg" alt="Lezard château de Juzet" title="Lezard château de Juzet">
-            <div class="grid_text">
-                <h3>Lezard chateau de Juzet</h3>
-                <p>Vallée du Dons</p>
-            </div>
-        </div>
-        <div class="grid_cell">
-            <img class="grid_picture" src="img/Small/Couplecouchedesoleil_medium_small.jpg" alt=" Couple au coucher de soleil La Tranche/mer" title="Couple au coucher de soleil La Tranche/mer">
-            <div class="grid_text">
-                <h3>Couple au coucher de soleil</h3>
-                <p>La Tranche/mer</p>
-            </div>
-        </div>
-        <div class="grid_cell">
-            <img class="grid_picture" src="img/Small/fleurjardin_medium_small.jpg" alt="Cosmos Normandie" title="Cosmos Normandie">
-            <div class="grid_text">
-                <h3>Cosmos </h3>
-                <p>Normandie</p>
-            </div>
-        </div>
-        <div class="grid_cell">
-            <img class="grid_picture" src="img/Small/ladyLikeLilly_medium_small.jpg" alt="Lady Like lilly" title="Lady Like lilly">
-            <div class="grid_text">
-                <h3>Lady Like lilly</h3>
-                <p>Festival 3 éléphants Laval</p>
-            </div>
-        </div>
-        <div class="grid_cell">
-            <img class="grid_picture" src="img/Small/Surfer1_medium_small.jpg" alt="Surfer" title="Surfer">
-            <div class="grid_text">
-                <h3>Surfer</h3>
-                <p>La Tranche/mer</p>
-            </div>
-        </div>
+        <figure>
+            <img class="grid_picture" src="img/Medium/2kags_medium.jpg" alt="Les Kag" title="Les Kag">
+        </figure>
+        <figure>
+            <img class="grid_picture" src="img/Medium/bwcheminplage_medium.jpg" alt="Dune vers la plage B&W"
+                title="Dune vers la plage B&W">
+        </figure>
+        <figure>
+            <img class="grid_picture" src="img/Medium/Cabannetharon_medium.jpg" alt="Pecherie Tharon"
+                title="Pecherie Tharon">
+        </figure>
+        <figure>
+            <img class="grid_picture" src="img/Medium/Concarneau_medium.jpg" alt="rue à Concarneau"
+                title="rue à Concarneau">
+        </figure>
+        <figure>
+            <img class="grid_picture" src="img/Medium/Accesplage_medium.jpg" alt="Chemin vers la plage"
+                title="Chemin vers la plage">
+        </figure>
+        <figure>
+            <img class="grid_picture" src="img/Medium/Chenille_medium.jpg" alt="chenilles processionnaire"
+                title="chenilles processionnaire">
+        </figure>
+        <figure>
+            <img class="grid_picture" src="img/Medium/Graf_medium.jpg" alt="Graffiti ancien abattoir de Nantes"
+            title="Graffiti ancien abattoir de Nantes">
+
+        </figure>
+        <figure>
+            <img class="grid_picture" src="img/Medium/donlezard_medium.jpg" alt="Lezard château de Juzet"
+            title="Lezard château de Juzet">
+
+        </figure>
+        <figure>           
+            <img class="grid_picture" src="img/Medium/Couplecouchedesoleil_medium.jpg"
+            alt=" Couple au coucher de soleil La Tranche/mer" title="Couple au coucher de soleil La Tranche/mer">
+
+
+        </figure>
+        <figure>
+            <img class="grid_picture" src="img/Medium/gwadaeaumer_medium.jpg" alt="Mer turquoise Guadeloupe"
+                title="Mer turquoise Guadeloupe">
+        </figure>
+        <figure>
+            <img class="grid_picture" src="img/Medium/ebonybones_medium.jpg" alt="Ebony Bones festival pont du Rock"
+            title="Ebony Bones festival pont du Rock">
+
+        </figure>
+        <figure>
+            <img class="grid_picture" src="img/Medium/fleurjardin_medium.jpg" alt="Cosmos Normandie"
+            title="Cosmos Normandie">
+
+        </figure>
+        <figure>
+ 
+                <img class="grid_picture" src="img/Medium/fleurrouge_medium.jpg" alt="Lady Like lilly"
+                title="Fleurs rouges">
+        </figure>
+        <figure>
+            <img class="grid_picture" src="img/Medium/Galets_medium.jpg" alt="Galets Tranche /mer"
+                title="Luminor Flyback">
+        </figure>
+        <figure>
+            <img class="grid_picture" src="img/Medium/Surfer1_medium.jpg" alt="Surfer" title="Surfer">
+        </figure>
+
     </section>
 </main>
+<script>
+    const picture = document.querySelector('img')
 
+    //retourne le contenu du premier div
+    const DIV = document.querySelector('.grid_picture')
+    // permet de vérifier si l'image est en fullscreen il quit
+    const toggleFullscreen = () => {
+        if (document.fullscreenElement)
+            document.exitFullscreen()
+        else
+            DIV.requestFullscreen()
+    }
+    //Action sur le bouton permet de prendre l'inverse de l'état actuel de l'image
+    picture.addEventListener('click', toggleFullscreen)
+
+    //Foreach qui permet d'affichage l'image en fullscreen
+    const onChange = () => {
+        DIV.className = document.fullscreenElement ? 'fullscreen' : ''
+    }
+    //Activation de l'évenement au changement d'état 
+    document.addEventListener('fullscreenchange', onChange)
+</script>
 <footer>
-
-    <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />Ce(tte) œuvre est mise à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Licence Creative Commons Attribution - Pas d&#39;Utilisation Commerciale - Pas de Modification 4.0 International</a>.
-
+    Licence Creative Commons . <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img
+            alt="Licence Creative Commons" style="border-width:0"
+            src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a>
 </footer>
 
 </html>
