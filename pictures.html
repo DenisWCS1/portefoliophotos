@@ -1,120 +1,115 @@
 <!DOCTYPE html>
 <html lang="fr">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width">
-    <link href="css\style.css" rel="stylesheet" type="text/css" />
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" /> <!-- ajouter un icone -->
-    <title>Denis Photos</title>
-</head>
-<header class="header">
-    <nav class="nav">
-        <ul>
-            <li class="active"><a href="index.html">Acceuil</a></li>
-            <li><a href="pictures.html">Photos</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-</header>
-<main>
-    <h1>Mes Photos</h1>
-    <section class="grid_container">
-        <figure>
-            <img class="grid_picture" src="img/Medium/2kags_medium.jpg" alt="Les Kag" title="Les Kag">
-        </figure>
-        <figure>
-            <img class="grid_picture" src="img/Medium/bwcheminplage_medium.jpg" alt="Dune vers la plage B&W"
-                title="Dune vers la plage B&W">
-        </figure>
-        <figure>
-            <img class="grid_picture" src="img/Medium/Cabannetharon_medium.jpg" alt="Pecherie Tharon"
-                title="Pecherie Tharon">
-        </figure>
-        <figure>
-            <img class="grid_picture" src="img/Medium/Concarneau_medium.jpg" alt="rue à Concarneau"
-                title="rue à Concarneau">
-        </figure>
-        <figure>
-            <img class="grid_picture" src="img/Medium/Accesplage_medium.jpg" alt="Chemin vers la plage"
-                title="Chemin vers la plage">
-        </figure>
-        <figure>
-            <img class="grid_picture" src="img/Medium/Chenille_medium.jpg" alt="chenilles processionnaire"
-                title="chenilles processionnaire">
-        </figure>
-        <figure>
-            <img class="grid_picture" src="img/Medium/Graf_medium.jpg" alt="Graffiti ancien abattoir de Nantes"
-            title="Graffiti ancien abattoir de Nantes">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width">
+        <link href="/css/style.css" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"> <!-- ajouter un icone -->
+        <title>Denis Photos</title>
+    </head>
+    <header class="header">
+        <span> MON PORTFOLIO PHOTOS</span>
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Acceuil</a></li>
+                <li><a href="pictures.html">Photos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Mes photos</h1>
+        <div class="grid_container">
+            <figure>
+                <img class="grid_picture" src="img/Medium/2kags.jpg" alt="Les Kag" title="Les Kag">
+            </figure>
+            <figure>
+                <img class="grid_picture" src="img/Medium/bwcheminplage.jpg" alt="Dune vers la plage B&W"
+                    title="Dune vers la plage B&W">
+            </figure>
+            <figure>
+                <img class="grid_picture" src="img/Medium/Cabannetharon.jpg" alt="Pecherie Tharon"
+                    title="Pecherie Tharon">
+            </figure>
+            <figure>
+                <img class="grid_picture" src="img/Medium/Concarneau.jpg" alt="rue à Concarneau"
+                    title="rue à Concarneau">
+            </figure>
+            <figure>
+                <img class="grid_picture" src="img/Medium/Accesplage.jpg" alt="Chemin vers la plage"
+                    title="Chemin vers la plage">
+            </figure>
+            <figure>
+                <img class="grid_picture" src="img/Medium/Chenille.jpg" alt="chenilles processionnaire"
+                    title="chenilles processionnaire">
+            </figure>
+            <figure>
+                <img class="grid_picture" src="img/Medium/Graf.jpg" alt="Graffiti ancien abattoir de Nantes"
+                    title="Graffiti ancien abattoir de Nantes">
+            </figure>
+            <figure>
+                <img class="grid_picture" src="img/Medium/donlezard.jpg" alt="Lezard château de Juzet"
+                    title="Lezard château de Juzet">
+            </figure>
+            <figure>
+                <img class="grid_picture" src="img/Medium/Couplecouchedesoleil.jpg"
+                    alt=" Couple au coucher de soleil La Tranche/mer"
+                    title="Couple au coucher de soleil La Tranche/mer">
+            </figure>
+            <figure>
+                <img class="grid_picture" src="img/Medium/gwadaeaumer.jpg" alt="Mer turquoise Guadeloupe"
+                    title="Mer turquoise Guadeloupe">
+            </figure>
+            <figure>
+                <img class="grid_picture" src="img/Medium/ebonybones.jpg" alt="Ebony Bones festival pont du Rock"
+                    title="Ebony Bones festival pont du Rock">
+            </figure>
+            <figure>
+                <img class="grid_picture" src="img/Medium/fleurjardin.jpg" alt="Cosmos Normandie"
+                    title="Cosmos Normandie">
+            </figure>
+            <figure>
+                <img class="grid_picture" src="img/Medium/fleurrouge.jpg" alt="Lady Like lilly" title="Fleurs rouges">
+            </figure>
+            <figure>
+                <img class="grid_picture" src="img/Medium/Galets.jpg" alt="Galets Tranche /mer" title="Luminor Flyback">
+            </figure>
+            <figure>
+                <img class="grid_picture" src="img/Medium/Surfer1.jpg" alt="Surfer" title="Surfer">
+            </figure>
+        </div>
+    </main>
+    <script>
+        const picture = document.querySelector('img')
 
-        </figure>
-        <figure>
-            <img class="grid_picture" src="img/Medium/donlezard_medium.jpg" alt="Lezard château de Juzet"
-            title="Lezard château de Juzet">
+        //retourne le contenu du premier div
+        const DIV = document.querySelector('.grid_picture')
+        // permet de vérifier si l'image est en fullscreen il quit
+        const toggleFullscreen = () => {
+            if (document.fullscreenElement)
+                document.exitFullscreen()
+            else
+                DIV.requestFullscreen()
+        }
+        //Action sur le bouton permet de prendre l'inverse de l'état actuel de l'image
+        picture.addEventListener('click', toggleFullscreen)
 
-        </figure>
-        <figure>           
-            <img class="grid_picture" src="img/Medium/Couplecouchedesoleil_medium.jpg"
-            alt=" Couple au coucher de soleil La Tranche/mer" title="Couple au coucher de soleil La Tranche/mer">
-
-
-        </figure>
-        <figure>
-            <img class="grid_picture" src="img/Medium/gwadaeaumer_medium.jpg" alt="Mer turquoise Guadeloupe"
-                title="Mer turquoise Guadeloupe">
-        </figure>
-        <figure>
-            <img class="grid_picture" src="img/Medium/ebonybones_medium.jpg" alt="Ebony Bones festival pont du Rock"
-            title="Ebony Bones festival pont du Rock">
-
-        </figure>
-        <figure>
-            <img class="grid_picture" src="img/Medium/fleurjardin_medium.jpg" alt="Cosmos Normandie"
-            title="Cosmos Normandie">
-
-        </figure>
-        <figure>
- 
-                <img class="grid_picture" src="img/Medium/fleurrouge_medium.jpg" alt="Lady Like lilly"
-                title="Fleurs rouges">
-        </figure>
-        <figure>
-            <img class="grid_picture" src="img/Medium/Galets_medium.jpg" alt="Galets Tranche /mer"
-                title="Luminor Flyback">
-        </figure>
-        <figure>
-            <img class="grid_picture" src="img/Medium/Surfer1_medium.jpg" alt="Surfer" title="Surfer">
-        </figure>
-
-    </section>
-</main>
-<script>
-    const picture = document.querySelector('img')
-
-    //retourne le contenu du premier div
-    const DIV = document.querySelector('.grid_picture')
-    // permet de vérifier si l'image est en fullscreen il quit
-    const toggleFullscreen = () => {
-        if (document.fullscreenElement)
-            document.exitFullscreen()
-        else
-            DIV.requestFullscreen()
-    }
-    //Action sur le bouton permet de prendre l'inverse de l'état actuel de l'image
-    picture.addEventListener('click', toggleFullscreen)
-
-    //Foreach qui permet d'affichage l'image en fullscreen
-    const onChange = () => {
-        DIV.className = document.fullscreenElement ? 'fullscreen' : ''
-    }
-    //Activation de l'évenement au changement d'état 
-    document.addEventListener('fullscreenchange', onChange)
-</script>
-<footer>
-    Licence Creative Commons . <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img
-            alt="Licence Creative Commons" style="border-width:0"
-            src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a>
-</footer>
+        //Foreach qui permet d'affichage l'image en fullscreen
+        const onChange = () => {
+            DIV.className = document.fullscreenElement ? 'fullscreen' : ''
+        }
+        //Activation de l'évenement au changement d'état 
+        document.addEventListener('fullscreenchange', onChange)
+    </script>
+    <footer>
+        <div class="footerContainer">
+            <p> Licence Creative Commons . <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">
+                    <img src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png"
+                        alt="Licence Creative Commons"></a>
+            </p>
+        </div>
+    </footer>
 
 </html>

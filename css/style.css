@@ -3,26 +3,45 @@
 Style gobal
 ***************************************************************
 */
+@font-face {
+  font-family: "Lato";
+  src: url("/fonts/Lato-Regular.ttf");
+}
+@font-face {
+  font-family: "Lato";
+  src: url("/fonts/Lato-Bold.ttf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("/fonts/Lato-Italic.ttf");
+  font-style: italic;
+}
+* {
+  box-sizing: border-box;
+}
 Html,
 main {
-  font-size: clamp(1rem, 2.2vw, 3.5rem);
+  font-family: "Lato", Arial, sans-serif;
+  font-size: clamp(1rem, 2.2vw, 3.5rem); /* clamp(MIN, VAL, MAX)*/
   padding: 0;
   margin: 0;
   color: #262626;
+  min-height: 100vh;
 }
-
-p {
-  padding-left: 10px;
-  padding-right: 10px;
-  text-align: justify;
+body {
+  margin-top: 0.5em;
+  margin-bottom: 0;
 }
 
 h1 {
   color: #262626;
+  font-size: clamp(1em, 1.3em, 2em);
 }
 
 h2 {
   color: #262626;
+  font-size: clamp(0.8em, 1.1em, 1.8em);
 }
 
 /*
@@ -31,38 +50,46 @@ Menu navigation
 ***************************************************************
 */
 .header {
+  display: block;
   position: sticky;
-  top: 0;
+  top: 0px;
+  width: 95vw;
 }
-
+.header span {
+  display: none;
+}
+h1 .mobileTitle {
+  color: #262626;
+  font-size: clamp(1em, 1.3em, 2em);
+}
+.nav {
+  background-color: #f2f2f2;
+}
 .nav ul {
   display: flex;
-  /*affichage du menu responsive tous les éléments enfant sont affectés par le display flex */
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
   width: 100%;
   justify-content: center;
-  /* align les blocks ".nav a" au centre*/
   list-style: none;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   border: #d3d3d3 1px solid;
 }
-
 .nav li {
   flex-grow: 1;
 }
 
 .nav li:hover {
-  background-color: #48CAD9;
+  background-color: #48cad9;
 }
 
 .nav a {
   display: block;
-  padding: 1em;
+  padding: 0.6em;
   text-align: center;
   text-decoration: none;
   color: #595959;
-  font-size: clamp(1.1rem, 2.2vw, 3.5rem);
+  font-size: clamp(1em, 1.3em, 2em);
 }
 
 .nav a:hover {
@@ -74,33 +101,49 @@ Menu navigation
 Liste index.html des lieu
 ***************************************************************
 */
-.indexSection  hr {
-  border-top: 1px #F2F2F2 dotted;
-}
 .indexSection p {
   padding: 1.2rem 0.4rem 1.2rem 0.4rem;
-  background-color: #F2F2F2;
-  border: #858585 0.15rem dashed;
+  background-color: #f2f2f2;
+  border: #858585 0.01rem solid;
+  border-radius: 0.3em;
+  font-size: clamp(0.8em, 1em, 1.8em);
 }
-
+.indexSection .p1 {
+  animation: fadeIn 2s;
+}
+.indexSection .p2 {
+  animation: fadeIn 4s;
+}
+.indexSection .p3 {
+  animation: fadeIn 5s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .pictureListe {
   position: relative;
   display: block;
-  padding: .4em .4em .4em 2em;
-  margin: .5em 0;
-  background-color: #F2F2F2;
-  border: #858585 0.15rem dashed;
-  border-radius: .3em;
-    /* initialisation des chiffre */
+  padding: 0.4em 0.4em 0.4em 2em;
+  margin: 0.5em 0 3em;
+  background-color: #f2f2f2;
+  border: #858585 0.01rem solid;
+  border-radius: 0.3em;
+  font-size: clamp(0.8em, 1em, 1.8em);
+  /* initialisation des chiffre */
   counter-reset: li;
   color: #444;
   text-decoration: none;
+  animation: fadeIn 6s;
 }
 
 .pictureListe ol {
   counter-reset: li;
   list-style: none;
-  font-size: clamp(1.1rem, 2.2vw, 3.5rem);
   padding: 0;
   margin-bottom: 4em;
 }
@@ -108,9 +151,9 @@ Liste index.html des lieu
 .pictureListe a {
   position: relative;
   display: block;
-  padding: .4em .4em .4em 2em;
-  margin: .5em 0;
-  background: #48CAD9;
+  padding: 0.4em 0.4em 0.4em 2em;
+  margin: 0.2em 0;
+  background: #48cad9;
   color: white;
   text-decoration: none;
   border-radius: 1em;
@@ -132,7 +175,7 @@ Liste index.html des lieu
   /*position du cercle du chiffre */
   margin-top: -1.3em;
   /*position du cercle du chiffre */
-  background: #48CAD9;
+  background: #48cad9;
   height: 2em;
   /* hauteur du cercle du chiffre */
   width: 2em;
@@ -144,7 +187,7 @@ Liste index.html des lieu
   text-align: center;
   font-weight: bold;
   border-radius: 1.2em;
-  color: #FFF;
+  color: #fff;
 }
 
 /*
@@ -156,32 +199,26 @@ Liste index.html des lieu
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto;
-  margin: 0;
+  margin-bottom: 4em;
   justify-content: center;
+  gap: 0.3em;
 }
+
 .grid_container figure {
   margin: 0;
   padding: 0;
 }
-@media (min-width: 480px){
-  .grid_container {
-    max-width: 98vw;
-    display: grid;
-    grid-template-columns: 33.333% 33.333% 33.333%;
-    grid-template-rows: auto;
-  }
-  .grid_container figure {
-    margin: 0;
-    padding: 0;
-  }
-  .grid_container img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-  }
 
+.grid_container figure {
+  margin: 0;
+  padding: 0;
 }
-  
+.grid_container img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .grid_cell {
   width: 85vw;
   margin: 1px;
@@ -202,35 +239,163 @@ Liste index.html des lieu
   margin-top: 2px;
   padding: 0;
 }
+/*
+-----------------------------------------------------
+Mise en forme de la page Contact Us
+-----------------------------------------------------
+*/
+.contact {
+  height: 10vh;
+  width: 90vw;
+}
 
-.grid_text h3 {
-  font-size: clamp(0.85em, 2.2vw, 3.5rem);
+.formulaire {
+  display: block;
+  padding: 1rem;
+  margin: 0 auto;
+}
+.formulaire h1 {
+  padding: 20px;
+  color: #4b4a4a;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.45);
+  border: 1px ridge rgba(95, 95, 95, 0.5);
+  vertical-align: middle;
+  text-align: center;
+}
+
+input[type="text"],
+textarea,
+input[type="email"] {
+  width: 100%;
+  height: 1rem;
+  font-size: clamp(0.55em, 0.75em, 2rem);
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 4px;
+  resize: vertical;
+}
+label {
+  display: block;
+  width: 100%;
+  height: 1em;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  color: #4b4a4a;
+}
+input[type="submit"] {
+  background-color: #44d7ebcb;
+  color: white;
+  float: right;
+  margin-top: 0.5rem;
+  font-size: clamp(0.55em, 0.75em, 2rem);
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 0.8rem;
+  cursor: pointer;
+}
+input[type="submit"]:hover {
+  background-color: #44d7ebcb;
+  opacity: 0.6;
 }
 
 /*
-   -----------------------------------------------------
-   Style footer
-   -----------------------------------------------------
+-----------------------------------------------------
+  Style footer
+  -----------------------------------------------------
   */
 footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #F2F2F2;
-  padding: 0.6em;
-  border: #858585 0.15rem dashed;
-
+  position: sticky;
+  bottom: 0;
+  z-index: 2;
 }
-
+footer .footerContainer {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0 0 1em;
+  width: 100%;
+  background-color: #f2f2f2;
+  border: #858585 0.01rem solid;
+}
 footer p {
-  font-size: 0.7em;
+  display: block;
+  font-size: clamp(0.55em, 0.95em, 2rem);
   font-weight: 300;
-  color: #A4A4A4;
-
+  color: #a4a4a4;
 }
 
 footer p a {
   text-decoration: none;
-  color: #A4A4A4;
+  color: #a4a4a4;
+}
+footer img {
+  width: 25%;
 }
 
+/*
+   -----------------------------------------------------
+   media query
+   -----------------------------------------------------
+ */
+@media screen and (min-width: 480px) {
+  body {
+    margin-top: 0;
+  }
+  .mobileTitle {
+    display: none;
+  }
+
+  .header {
+    display: block;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-image: url(/img/bandeau.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .header span {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 40vh;
+    height: 3rem;
+    text-align: center;
+    font-size: clamp(2.5em, 3.2vw, 4.5rem);
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.8);
+    box-shadow: inset rgba(0, 0, 0, 0.15) 15px 0 15px 0;
+    background-color: rgba(90, 90, 90, 0.2);
+  }
+  .nav {
+    position: absolute;
+    overflow: hidden;
+    left: 20%;
+    right: 20%;
+    top: 85vh;
+    width: 60%;
+    z-index: 1000;
+    margin: 0;
+    background-color: rgba(242, 242, 242, 0.75);
+    border-radius: 1rem;
+    border: outset rgba(242, 242, 242, 0.5) 0.06rem;
+  }
+  .nav ul {
+    background-color: rgba(242, 242, 242, 0.55);
+  }
+  .grid_container {
+    max-width: 98vw;
+    display: grid;
+    grid-template-columns: 32% 32% 32%;
+    grid-template-rows: auto;
+  }
+  footer {
+    position: relative;
+    bottom: 0;
+    z-index: 2;
+  }
+  footer img {
+    width: auto;
+  }
+}
