@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width">
+        <link href="./css/style.css" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" type="image/x-icon" href="./img/ico/favicon.ico">
+        <meta name="description"
+            content="Site de photos de denis Perrisseau pour le projet 1 dans le cadre de la formation développeur Web & Mobile">
+        <title>Denis Photos</title>
+    </head>
+
+    <body>
+        <header class="header">
+            <span> MON PORTFOLIO PHOTOS</span>
+            <nav class="nav">
+                <ul>
+                    <li><a href="./index.html">Acceuil</a></li>
+                    <li><a href="./pictures.html">Photos</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="contact">
+                <h1>Contact</h1>
+                <label for="idname">Nom</label>
+                <input id="idname" type="text" class="formName" name="name" placeholder="Votre nom">
+                <label for="idemailAddress">Email</label>
+                <input id="idemailAddress" class="emailAddress" type="email" name="email"
+                    placeholder="*******@domain.**">
+                <label for="idmessage">Message</label>
+                <textarea id="idmessage" class="message" name="message" placeholder="Votre message"
+                    style="height:200px"></textarea>
+                <button onclick="submit()" class>envoyer </button>
+            </div>
+            <div class="formresult">
+            </div>
+        </main>
+        <footer>
+            <div class="footerContainer">
+                <p> Licence Creative Commons . <a rel="license"
+                        href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Licence Creative Commons"
+                            style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png"></a>
+                </p>
+            </div>
+        </footer>
+        <script src="./js/form.js"></script>
+    </body>
+
+</html>
