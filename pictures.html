@@ -5,111 +5,104 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width">
-        <link href="/css/style.css" rel="stylesheet" type="text/css">
-        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"> <!-- ajouter un icone -->
+        <link href="./css/style.css" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" type="image/x-icon" href="./img/ico/favicon.ico">
+        <meta name="description"
+            content="Site de photos de denis Perrisseau pour le projet 1 dans le cadre de la formation développeur Web & Mobile">
         <title>Denis Photos</title>
     </head>
-    <header class="header">
-        <span> MON PORTFOLIO PHOTOS</span>
-        <nav class="nav">
-            <ul>
-                <li><a href="index.html">Acceuil</a></li>
-                <li><a href="pictures.html">Photos</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <h1>Mes photos</h1>
-        <div class="grid_container">
-            <figure>
-                <img class="grid_picture" src="img/Medium/2kags.jpg" alt="Les Kag" title="Les Kag">
-            </figure>
-            <figure>
-                <img class="grid_picture" src="img/Medium/bwcheminplage.jpg" alt="Dune vers la plage B&W"
-                    title="Dune vers la plage B&W">
-            </figure>
-            <figure>
-                <img class="grid_picture" src="img/Medium/Cabannetharon.jpg" alt="Pecherie Tharon"
-                    title="Pecherie Tharon">
-            </figure>
-            <figure>
-                <img class="grid_picture" src="img/Medium/Concarneau.jpg" alt="rue à Concarneau"
-                    title="rue à Concarneau">
-            </figure>
-            <figure>
-                <img class="grid_picture" src="img/Medium/Accesplage.jpg" alt="Chemin vers la plage"
-                    title="Chemin vers la plage">
-            </figure>
-            <figure>
-                <img class="grid_picture" src="img/Medium/Chenille.jpg" alt="chenilles processionnaire"
-                    title="chenilles processionnaire">
-            </figure>
-            <figure>
-                <img class="grid_picture" src="img/Medium/Graf.jpg" alt="Graffiti ancien abattoir de Nantes"
-                    title="Graffiti ancien abattoir de Nantes">
-            </figure>
-            <figure>
-                <img class="grid_picture" src="img/Medium/donlezard.jpg" alt="Lezard château de Juzet"
-                    title="Lezard château de Juzet">
-            </figure>
-            <figure>
-                <img class="grid_picture" src="img/Medium/Couplecouchedesoleil.jpg"
-                    alt=" Couple au coucher de soleil La Tranche/mer"
-                    title="Couple au coucher de soleil La Tranche/mer">
-            </figure>
-            <figure>
-                <img class="grid_picture" src="img/Medium/gwadaeaumer.jpg" alt="Mer turquoise Guadeloupe"
-                    title="Mer turquoise Guadeloupe">
-            </figure>
-            <figure>
-                <img class="grid_picture" src="img/Medium/ebonybones.jpg" alt="Ebony Bones festival pont du Rock"
-                    title="Ebony Bones festival pont du Rock">
-            </figure>
-            <figure>
-                <img class="grid_picture" src="img/Medium/fleurjardin.jpg" alt="Cosmos Normandie"
-                    title="Cosmos Normandie">
-            </figure>
-            <figure>
-                <img class="grid_picture" src="img/Medium/fleurrouge.jpg" alt="Lady Like lilly" title="Fleurs rouges">
-            </figure>
-            <figure>
-                <img class="grid_picture" src="img/Medium/Galets.jpg" alt="Galets Tranche /mer" title="Luminor Flyback">
-            </figure>
-            <figure>
-                <img class="grid_picture" src="img/Medium/Surfer1.jpg" alt="Surfer" title="Surfer">
-            </figure>
-        </div>
-    </main>
-    <script>
-        const picture = document.querySelector('img')
 
-        //retourne le contenu du premier div
-        const DIV = document.querySelector('.grid_picture')
-        // permet de vérifier si l'image est en fullscreen il quit
-        const toggleFullscreen = () => {
-            if (document.fullscreenElement)
-                document.exitFullscreen()
-            else
-                DIV.requestFullscreen()
-        }
-        //Action sur le bouton permet de prendre l'inverse de l'état actuel de l'image
-        picture.addEventListener('click', toggleFullscreen)
-
-        //Foreach qui permet d'affichage l'image en fullscreen
-        const onChange = () => {
-            DIV.className = document.fullscreenElement ? 'fullscreen' : ''
-        }
-        //Activation de l'évenement au changement d'état 
-        document.addEventListener('fullscreenchange', onChange)
-    </script>
-    <footer>
-        <div class="footerContainer">
-            <p> Licence Creative Commons . <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">
-                    <img src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png"
-                        alt="Licence Creative Commons"></a>
-            </p>
+    <body>
+        <header class="header">
+            <span> MON PORTFOLIO PHOTOS</span>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Acceuil</a></li>
+                    <li><a href="pictures.html">Photos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="img-viewer">
+            <!--<img src="" class="modal-content" id="full-image" onclick="full_screenPicture(this)">
+        -->
         </div>
-    </footer>
+        <main>
+            <h1>Mes photos</h1>
+            <div class="grid_container">
+                <figure>
+                    <img class="grid_picture" src="img/Small/2kags.jpg" alt="Les Kag" title="Les Kag"
+                        onclick="full_screenPicture(this)">
+                </figure>
+                <figure>
+                    <img class="grid_picture" src="img/Small/bwcheminplage.jpg" alt="Dune vers la plage B&W"
+                        title="Dune vers la plage B&W" onclick="full_screenPicture(this)">
+                </figure>
+                <figure>
+                    <img class="grid_picture" src="img/Small/Cabannetharon.jpg" alt="Pecherie Tharon"
+                        title="Pecherie Tharon" onclick="full_screenPicture(this)">
+                </figure>
+                <figure>
+                    <img class="grid_picture" src="img/Small/Concarneau.jpg" alt="rue à Concarneau"
+                        title="rue à Concarneau" onclick="full_screenPicture(this)">
+                </figure>
+                <figure>
+                    <img class="grid_picture" src="img/Small/Accesplage.jpg" alt="Chemin vers la plage"
+                        title="Chemin vers la plage" onclick="full_screenPicture(this)">
+                </figure>
+                <figure>
+                    <img class="grid_picture" src="img/Small/Chenille.jpg" alt="chenilles processionnaire"
+                        title="chenilles processionnaire" onclick="full_screenPicture(this)">
+                </figure>
+                <figure>
+                    <img class="grid_picture" src="img/Small/Graf.jpg" alt="Graffiti ancien abattoir de Nantes"
+                        title="Graffiti ancien abattoir de Nantes" onclick="full_screenPicture(this)">
+                </figure>
+                <figure>
+                    <img class="grid_picture" src="img/Small/donlezard.jpg" alt="Lezard château de Juzet"
+                        title="Lezard château de Juzet" onclick="full_screenPicture(this)">
+                </figure>
+                <figure>
+                    <img class="grid_picture" src="img/Small/Couplecouchedesoleil.jpg"
+                        alt=" Couple au coucher de soleil La Tranche/mer"
+                        title="Couple au coucher de soleil La Tranche/mer" onclick="full_screenPicture(this)">
+                </figure>
+                <figure>
+                    <img class="grid_picture" src="img/Small/gwadaeaumer.jpg" alt="Mer turquoise Guadeloupe"
+                        title="Mer turquoise Guadeloupe" onclick="full_screenPicture(this)">
+                </figure>
+                <figure>
+                    <img class="grid_picture" src="img/Small/ebonybones.jpg" alt="Ebony Bones festival pont du Rock"
+                        title="Ebony Bones festival pont du Rock" onclick="full_screenPicture(this)">
+                </figure>
+                <figure>
+                    <img class="grid_picture" src="img/Small/gwadaeauplage.jpg" alt="Cosmos Normandie"
+                        title="Cosmos Normandie" onclick="full_screenPicture(this)">
+                </figure>
+                <figure>
+                    <img class="grid_picture" src="img/Small/fleurrouge.jpg" alt="Lady Like lilly" title="Fleurs rouges"
+                        onclick="full_screenPicture(this)">
+                </figure>
+                <figure>
+                    <img class="grid_picture" src="img/Small/Galets.jpg" alt="Galets Tranche /mer"
+                        title="Luminor Flyback" onclick="full_screenPicture(this)">
+                </figure>
+                <figure>
+                    <img class="grid_picture" src="img/Small/Surfer1.jpg" alt="Surfer" title="Surfer"
+                        onclick="full_screenPicture(this)">
+                </figure>
+            </div>
+        </main>
+        <footer>
+            <div class="footerContainer">
+                <p> Licence Creative Commons . <a rel="license"
+                        href="http://creativecommons.org/licenses/by-nc-nd/4.0/">
+                        <img src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png"
+                            alt="Licence Creative Commons"></a>
+                </p>
+            </div>
+        </footer>
+        <script src="/js/pictures.js"></script>
+    </body>
 
 </html>
