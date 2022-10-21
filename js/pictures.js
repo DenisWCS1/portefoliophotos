@@ -19,7 +19,7 @@ function full_screenPicture(picture) {
       .split("/");
 
     //construction du chemin vers l'image en grand format pour l'affichage en full screen
-    let srcFinalpath = "../" + src[0] + "/large/" + src[2];
+    let srcFinalpath = "./" + src[0] + "/Large/" + src[2];
 
     //ajout de la balise img src=image large dans le div
     imgViewer.querySelector("img").setAttribute("src", srcFinalpath);
