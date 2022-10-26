@@ -502,11 +502,14 @@ footer img {
     grid-template-rows: auto;
   }
   footer {
-    position: relative;
+    position:relative;
     bottom: 0;
     z-index: 2;
   }
   footer img {
     width: auto;
   }
+  button {
+    height:3em;
+}
 }
